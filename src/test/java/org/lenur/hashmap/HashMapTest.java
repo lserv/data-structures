@@ -2,15 +2,16 @@ package org.lenur.hashmap;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.lenur.Car;
 
 public class HashMapTest {
-    private static final Car firstCar = new Car("Audi", "black");
-    private static final Car secondCar = new Car("Bmw", "red");
-    private static final Car thirdCar = new Car("Mercedes", "grey");
+    private static final Car FIRST_CAR = new Car("Audi", "black");
+    private static final Car SECOND_CAR = new Car("Bmw", "red");
+    private static final Car THIRD_CAR = new Car("Mercedes", "grey");
 
-    private static final Car sameFirstCar = new Car("Audi", "black");
-    private static final Car sameSecondCar = new Car("Bmw", "red");
-    private static final Car sameThirdCar = new Car("Mercedes", "grey");
+    private static final Car SAME_FIRST_CAR = new Car("Audi", "black");
+    private static final Car SAME_SECOND_CAR = new Car("Bmw", "red");
+    private static final Car SAME_THIRD_CAR = new Car("Mercedes", "grey");
 
     private static final HashCodeOne firstPlane = new HashCodeOne("FirstCode", "FirstInn");
     private static final HashCodeOne secondPlane = new HashCodeOne("SecondCode", "SecondInn");
@@ -23,22 +24,22 @@ public class HashMapTest {
     @Test
     public void getKeyFromEmptyHashMap() {
         Map<Car, Integer> hashMap = new HashMap<>();
-        Assert.assertNull(hashMap.get(firstCar));
+        Assert.assertNull(hashMap.get(FIRST_CAR));
         Assert.assertEquals(0, hashMap.getSize());
     }
 
     @Test
     public void putAndGet() {
         Map<Car, Integer> hashMap = new HashMap<>();
-        hashMap.put(firstCar, 3);
-        hashMap.put(secondCar, 5);
-        hashMap.put(thirdCar, 1);
+        hashMap.put(FIRST_CAR, 3);
+        hashMap.put(SECOND_CAR, 5);
+        hashMap.put(THIRD_CAR, 1);
 
         Assert.assertEquals(hashMap.getSize(), 3, hashMap.getSize());
 
-        Integer firstActualValue = hashMap.get(firstCar);
-        Integer secondActualValue = hashMap.get(secondCar);
-        Integer thirdActualValue = hashMap.get(thirdCar);
+        Integer firstActualValue = hashMap.get(FIRST_CAR);
+        Integer secondActualValue = hashMap.get(SECOND_CAR);
+        Integer thirdActualValue = hashMap.get(THIRD_CAR);
         Assert.assertEquals(Integer.valueOf(3), firstActualValue);
         Assert.assertEquals(Integer.valueOf(5), secondActualValue);
         Assert.assertEquals(Integer.valueOf(1), thirdActualValue);
@@ -47,18 +48,18 @@ public class HashMapTest {
     @Test
     public void putTheSameElement() {
         Map<Car, Integer> hashMap = new HashMap<>();
-        hashMap.put(firstCar, 3);
-        hashMap.put(secondCar, 5);
-        hashMap.put(thirdCar, 1);
-        hashMap.put(sameFirstCar, 3);
-        hashMap.put(sameSecondCar, 5);
-        hashMap.put(sameThirdCar, 1);
+        hashMap.put(FIRST_CAR, 3);
+        hashMap.put(SECOND_CAR, 5);
+        hashMap.put(THIRD_CAR, 1);
+        hashMap.put(SAME_FIRST_CAR, 3);
+        hashMap.put(SAME_SECOND_CAR, 5);
+        hashMap.put(SAME_THIRD_CAR, 1);
 
         Assert.assertEquals(3, hashMap.getSize());
 
-        Integer firstActualValue = hashMap.get(firstCar);
-        Integer secondActualValue = hashMap.get(secondCar);
-        Integer thirdActualValue = hashMap.get(thirdCar);
+        Integer firstActualValue = hashMap.get(FIRST_CAR);
+        Integer secondActualValue = hashMap.get(SECOND_CAR);
+        Integer thirdActualValue = hashMap.get(THIRD_CAR);
         Assert.assertEquals(Integer.valueOf(3), firstActualValue);
         Assert.assertEquals(Integer.valueOf(5), secondActualValue);
         Assert.assertEquals(Integer.valueOf(1), thirdActualValue);
@@ -112,13 +113,13 @@ public class HashMapTest {
     public void putAndGetTheOverriddenValueByKey() {
         Map<Car, Integer> hashMap = new HashMap<>();
 
-        hashMap.put(firstCar, 3);
+        hashMap.put(FIRST_CAR, 3);
         Assert.assertEquals(1, hashMap.getSize());
-        Assert.assertEquals(Integer.valueOf(3), hashMap.get(firstCar));
+        Assert.assertEquals(Integer.valueOf(3), hashMap.get(FIRST_CAR));
 
-        hashMap.put(firstCar, 5);
+        hashMap.put(FIRST_CAR, 5);
         Assert.assertEquals(1, hashMap.getSize());
-        Assert.assertEquals(Integer.valueOf(5), hashMap.get(firstCar));
+        Assert.assertEquals(Integer.valueOf(5), hashMap.get(FIRST_CAR));
     }
 
     @Test

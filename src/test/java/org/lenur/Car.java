@@ -1,11 +1,10 @@
-package org.lenur.hashmap;
+package org.lenur;
 
 import java.util.Objects;
 
 public class Car {
-
-    private String model;
-    private String color;
+    private final String model;
+    private final String color;
 
     public Car(String model, String color) {
         this.model = model;

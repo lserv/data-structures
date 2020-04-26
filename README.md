@@ -5,7 +5,7 @@
 
 ## Context
 
-❌ ArrayList
+✅ ArrayList
 
 ❌ LinkedList
 

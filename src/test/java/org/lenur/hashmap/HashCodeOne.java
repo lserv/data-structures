@@ -3,8 +3,8 @@ package org.lenur.hashmap;
 import java.util.Objects;
 
 public class HashCodeOne {
-    private String code;
-    private String inn;
+    private final String code;
+    private final String inn;
 
     public HashCodeOne(String code, String inn) {
         this.code = code;
