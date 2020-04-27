@@ -95,7 +95,7 @@ public class HashMap<K, V> implements Map<K, V> {
         final int hash;
         final K key;
         V value;
-        Node<K, V> next;
+        final Node<K, V> next;
 
         Node(int hash, K key, V value, Node<K,V> next) {
             this.hash = hash;
