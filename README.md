@@ -7,7 +7,7 @@
 
 ✅ ArrayList
 
-❌ LinkedList
+✅ LinkedList
 
 ❌ Stack
 
