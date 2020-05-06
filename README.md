@@ -1,7 +1,7 @@
 # Data structures. 
 [![Build Status](https://travis-ci.com/serveriev/data-structures.svg?branch=master)](https://travis-ci.com/serveriev/data-structures)
 
-> Basic implementation of data structures on java
+> Basic implementation of data structures in java
 
 ## Context
 
